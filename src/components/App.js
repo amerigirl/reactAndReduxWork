@@ -5,6 +5,9 @@ import AboutPage from "./about/AboutPage";
 import HomePage from "./Home/HomePage";
 import Header from "./common/Header";
 import PageNotFound from "./PageNotFound";
+import CoursesPage from "./courses/CoursesPage";
+
+
 
 export default function App() {
   return (
@@ -12,6 +15,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/about" element={<AboutPage />} />
+        <Route path="courses" element={<CoursesPage/>} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

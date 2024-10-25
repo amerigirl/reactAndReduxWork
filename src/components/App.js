@@ -1,8 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import AboutPage from "./about/AboutPage";
-// eslint-disable-next-line import/no-unresolved
-import HomePage from "./Home/HomePage";
+import HomePage from "./home/HomePage";
 import Header from "./common/Header";
 import PageNotFound from "./PageNotFound";
 import CoursesPage from "./courses/CoursesPage";

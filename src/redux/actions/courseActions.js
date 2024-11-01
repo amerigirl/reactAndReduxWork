@@ -1,5 +1,5 @@
 import * as types from "./actionTypes";
-import * as courseApi from "../../api/courseApi"; 
+import { courses } from "../../../tools/mockData";
 
 //action creators
 export function createCourse(course) {
@@ -11,13 +11,14 @@ export function loadCoursesSuccess(courses){
 }
 
 
-//thunks for handling async api calls
+// Thunks for handling async operations (mocking API calls)
 export function loadCourses() {
   return function (dispatch) {
-    return courseApi.getCourses().then(courses => {
-      dispatch(loadCoursesSuccess(courses));
-    }).catch(error => {
-        throw error
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        dispatch(loadCoursesSuccess(courses)); // Dispatch the success action with mock data
+        resolve(courses);
+      }, 1000); // Simulating an API call delay
     });
   };
 }

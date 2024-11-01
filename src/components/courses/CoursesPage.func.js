@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createCourse } from "react";
-
+import { createCourse } from "../../redux/actions/courseActions";
 
 export default function CoursesPage() {
   const dispatch = useDispatch();
@@ -16,7 +15,7 @@ export default function CoursesPage() {
   };
 
   const handleSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(); //is this still needed??
 
     dispatch(createCourse(course));
   };

@@ -11,7 +11,7 @@ export function loadCoursesSuccess(courses){
 }
 
 
-//thunks
+//thunks for handling async api calls
 export function loadCourses() {
   return function (dispatch) {
     return courseApi.getCourses().then(courses => {
